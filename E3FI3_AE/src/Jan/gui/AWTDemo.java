@@ -24,7 +24,7 @@ public class AWTDemo {
 		fenster.setSize(300, 200);
 		
 		
-		Button btn = new Button("Lolo");
+		Button btn = new Button("Lololo");
 		btn.addActionListener(myL);
 		
 		fenster.add(btn);
