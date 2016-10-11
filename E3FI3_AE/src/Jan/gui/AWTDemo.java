@@ -8,5 +8,6 @@ public class AWTDemo {
 		fenster.setSize(300, 200);
 		fenster.setVisible(true);
 		
+		System.out.println("Ende!");
 	}
 }
