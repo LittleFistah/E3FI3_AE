@@ -11,7 +11,7 @@ public class AWTDemo {
 		
 		Button btn = new Button("Lolo");
 		
-		
+		fenster.add(btn);
 		fenster.setVisible(true);
 		
 		System.out.println("Ende!");
