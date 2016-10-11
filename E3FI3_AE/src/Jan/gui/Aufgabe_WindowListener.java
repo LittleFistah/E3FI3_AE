@@ -1,5 +1,6 @@
 package Jan.gui;
 
+import java.awt.BorderLayout;
 import java.awt.Frame;
 import java.awt.Label;
 import java.awt.event.WindowEvent;
@@ -58,7 +59,7 @@ public class Aufgabe_WindowListener {
 		myWindowListener myW = new myWindowListener();
 		wind.addWindowListener(myW);
 		// Label hinzufügen
-		wind.add(myW.lbl);
+		wind.add(myW.lbl, BorderLayout.CENTER);
 		wind.setVisible(true);	
 		
 	}	
