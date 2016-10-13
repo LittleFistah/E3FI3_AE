@@ -37,6 +37,7 @@ public class Gui implements ItemListener{
 		wind.setResizable(false);
 		addGuiComponents(wind.getContentPane());
 		wind.pack();
+		checkPreis();
 		wind.setVisible(true);
 	}
 
