@@ -16,10 +16,10 @@ import javax.swing.JFrame;
 public class Gui implements ItemListener{
 	// Hauptframe
 	private JFrame wind;
-	//Pizzagrˆﬂen + Gruppe
+	//Pizzagr√∂√üen + Gruppe
 	private CheckboxGroup pizzaSize;
 	private Checkbox pizzaSmall, pizzaMedium, pizzaLarge;
-	// extra Bel‰ge
+	// extra Bel√§ge
 	private Checkbox extraSalami, extraSchinken, extraPeperoni, extraPilze, extraOliven, extraCheese;
 	//Preis
 	private Label lblPreis;
@@ -42,12 +42,12 @@ public class Gui implements ItemListener{
 	}
 
 	private void addGuiComponents(Container pane) {
-		//Default Grˆﬂe
+		//Default Gr√∂√üe
 		pane.setSize(640, 320);
 		// Layout
 		pane.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();	
-		// Gruppe f¸r Grˆﬂe
+		// Gruppe f√ºr Gr√∂√üe
 		pizzaSize = new CheckboxGroup();
 		
 		pizzaSmall = new Checkbox("Klein", false, pizzaSize);
@@ -68,7 +68,7 @@ public class Gui implements ItemListener{
 		gbc.gridy = 1;
 		pane.add(pizzaMedium, gbc);
 
-		pizzaLarge = new Checkbox("Groﬂ", false, pizzaSize);
+		pizzaLarge = new Checkbox("Gro√ü", false, pizzaSize);
 		pizzaLarge.addItemListener(this);
 		gbc.insets = new Insets(20, 10, 0, 0);
 		gbc.weightx = .5;
@@ -77,7 +77,7 @@ public class Gui implements ItemListener{
 		gbc.gridy = 1;
 		pane.add(pizzaLarge, gbc);
 		
-		// ExtraBel‰ge
+		// ExtraBel√§ge
 		extraSalami = new Checkbox("Salami", false);
 		extraSalami.addItemListener(this);
 		gbc.insets = new Insets(50, 5, 0, 0);
@@ -123,7 +123,7 @@ public class Gui implements ItemListener{
 		gbc.gridy = 3;
 		pane.add(extraOliven, gbc);
 		
-		extraCheese = new Checkbox("K‰se", true);
+		extraCheese = new Checkbox("K√§se", true);
 		extraCheese.addItemListener(this);
 		gbc.insets = new Insets(20, 5, 0, 0);
 		gbc.weightx = .5;
@@ -133,7 +133,7 @@ public class Gui implements ItemListener{
 		pane.add(extraCheese, gbc);
 		
 		//Preis
-		lblPreis = new Label("Preis: "+ preis+"Ä");
+		lblPreis = new Label("Preis: "+ preis+"‚Ç¨");
 		gbc.insets = new Insets(50, 5, 0, 0);
 		gbc.weightx = .5;
 		gbc.fill = GridBagConstraints.BOTH;
@@ -178,7 +178,7 @@ public class Gui implements ItemListener{
 				}
 			}
 		}
-		lblPreis.setText("Preis: "+preis+"Ä");
+		lblPreis.setText("Preis: "+preis+"‚Ç¨");
 		
 	}
 

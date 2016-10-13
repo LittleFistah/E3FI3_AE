@@ -45,22 +45,22 @@ class myWindowListener implements WindowListener{
 
 	@Override
 	public void windowOpened(WindowEvent e) {
-		System.out.println("Ich wurde geöffnet");
+		System.out.println("Ich wurde geï¿½ffnet");
 	}
 	
 }
 public class Aufgabe_WindowListener {
 
 	public static void main(String[] args) {
-	
+
 		Frame wind = new Frame("WindowListener");
 		wind.setSize(640, 320);
-		// WindowListener hinzufügen
+		// WindowListener hinzufï¿½gen
 		myWindowListener myW = new myWindowListener();
 		wind.addWindowListener(myW);
-		// Label hinzufügen
+		// Label hinzufï¿½gen
 		wind.add(myW.lbl, BorderLayout.CENTER);
-		wind.setVisible(true);	
-		
-	}	
+		wind.setVisible(true);
+
+	}
 }
