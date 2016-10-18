@@ -38,11 +38,11 @@ public class Gui extends JFrame implements MouseMotionListener {
 	public void mouseDragged(MouseEvent arg0) {
 		if (rect1.isInGeoForm(this.getMousePosition().x, this.getMousePosition().y)) {
 			rect1.setRechteck(this.getMousePosition().x-width/2, this.getMousePosition().y-height/2, width, height);
-		}
-		if (rect2.isInGeoForm(this.getMousePosition().x, this.getMousePosition().y)) {
+			repaint();
+		}else if (rect2.isInGeoForm(this.getMousePosition().x, this.getMousePosition().y)) {
 			rect2.setRechteck(this.getMousePosition().x-width/2, this.getMousePosition().y-height/2, width, height);
+			repaint();
 		}		
-		repaint();
 	}
 
 	@Override
