@@ -18,6 +18,8 @@ import javax.swing.JTextPane;
 
 public class Gui extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+
 	private JButton jbTime, jbQuote, jbEcho;
 	private JTextPane jtOutput;
 	private JScrollPane jsOutput;
@@ -42,7 +44,7 @@ public class Gui extends JFrame {
 		jsOutput.setBounds(10, 40, 570, 250);
 
 		super.add(jsOutput);
-		
+
 		jbTime = new JButton("Daytime");
 		jbTime.setBounds(10, 10, 186, 20);
 		jbTime.addActionListener(new ActionListener() {
@@ -96,10 +98,10 @@ public class Gui extends JFrame {
 
 				bw.println(toEcho);
 				bw.flush();
-				
+
 				BufferedReader br1 = new BufferedReader(new InputStreamReader(connector.getInputStream()));
 				output += br1.readLine();
-			}else {				
+			} else {
 				BufferedReader br = new BufferedReader(new InputStreamReader(connector.getInputStream()));
 				while ((line = br.readLine()) != null) {
 					output += line + "\n\t";
@@ -107,6 +109,7 @@ public class Gui extends JFrame {
 			}
 
 			jtOutput.setText(output);
+			connector.close();
 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
